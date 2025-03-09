@@ -10,7 +10,7 @@ for _ in range(1000):  # Ensure exactly 1000 entries are generated
     serial_number = f"X2000-{random.randint(1000, 9999)}"
     operation_mode = random.choice(["Idle", "Active", "Maintenance", "Error"])
     task_completed = random.choice(["Patrol", "Surveillance", "Assembly", "Inspection", "Transport", "Charging"])
-    battery_level = random.randint(0, 100)
+    battery_level = random.randint(0, 100)  
     temperature = round(random.uniform(20.0, 75.0), 2)  # °C
     error_code = random.choice(["ERR-101", "ERR-202", "ERR-303", None, None, None])  # Some NULL values
     last_maintenance = pd.Timestamp("2024-01-01") + pd.to_timedelta(random.randint(0, 180), unit="D")

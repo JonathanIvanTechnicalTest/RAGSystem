@@ -142,8 +142,8 @@ for i, title in enumerate(chapter_titles[:50]):
     if title in chart_titles:
         chart_filename = f"chart_{i}.png"
         generate_chart(chart_filename, chart_titles[title])
-        pdf.image(chart_filename, x=40, y=60, w=120)  # Adjusted chart size and position
-        pdf.ln(90)  # Ensure text starts below the image
+        pdf.image(chart_filename, x=40, y=60, w=120)  
+        pdf.ln(90)  
     
     pdf.chapter_body(generate_text(10))
 
