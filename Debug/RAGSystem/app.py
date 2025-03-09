@@ -61,7 +61,8 @@ def process_pdfs(pdf_folder):
                     text_data += page.extract_text() or ""  
     return text_data.strip()
 
-pdf_text = process_pdfs("pdfs")
+pdf_folder = os.path.join(os.getcwd(), "pdfs")
+pdf_text = process_pdfs(pdf_folder)
 postgres_data = fetch_postgres_data()
 documents = pdf_text + "\n" + "\n".join([str(row) for row in postgres_data])
 
