@@ -58,7 +58,7 @@ def process_pdfs(pdf_folder):
         if file.endswith(".pdf"):
             with pdfplumber.open(os.path.join(pdf_folder, file)) as pdf:
                 for page in pdf.pages:
-                    text_data += page.extract_text() or ""  # Handle None values
+                    text_data += page.extract_text() or ""  
     return text_data.strip()
 
 pdf_text = process_pdfs("pdfs")
