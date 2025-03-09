@@ -6,3 +6,4 @@ psycopg2-binary==2.9.10
 streamlit==1.42.0
 torch==2.1.0
 transformers==4.49.0
+faiss-cpu==1.10.0  
